@@ -1,0 +1,16 @@
+{
+    "name": "FVTC Job Wage Viewer",
+    "description": "Displays job hours and wage on job search listing. Now you don't need to go into each page.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+      {
+        "matches": ["*://student-casual-fvtc.icims.com/jobs/*"],
+        "js": ["wageExtension.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+}
